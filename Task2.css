@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', Arial, sans-serif; 
+  background-color: #102027; 
+  color: #e0e0e0;}
+
+/* Header Styles */
+header {
+  background-color: #0d253f; 
+  color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #1b3a57; 
+}
+
+/* Main Content Styles */
+main {
+  min-height: calc(100vh - 160px); 
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Styles */
+.about-section,
+.projects-section,
+.experience-section,
+.contact-section {
+  width: 100%;
+  background-color: #183d4b;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-details {
+  flex: 1;
+}
+
+.about-details h2 {
+  color: #00e676; 
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.about-details p {
+  color: #e0e0e0; 
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.about-photo {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-photo img:hover {
+  transform: scale(1.1);
+}
+
+/* Projects Section */
+.projects-section h2,
+.exp h2,
+.contact-section h2 {
+  color: #00e676; 
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: #224d58; 
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+}
+
+.project h3 {
+  color: #00e676;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #00e676;
+}
+
+/* Experience Section */
+.exp {
+  background-color: #224d58;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.exp:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+}
+
+.exp p {
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  background-color: #224d58; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-section:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); 
+}
+
+.contact-section h2 {
+  color: #00e676; 
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+form table {
+  width: 40%;
+}
+
+form table tr {
+  margin-bottom: 10px;
+}
+
+form table tr td {
+  padding: 5px;
+}
+
+form table tr td label {
+  display: block;
+  color: #e0e0e0;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form table tr td input,
+form table tr td textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  background-color: #102027; 
+  color: #e0e0e0; 
+  transition: border-color 0.3s;
+}
+
+form table tr td input:focus,
+form table tr td textarea:focus {
+  outline: none;
+  border-color: #00e676;
+}
+
+form table tr td textarea {
+  height: 120px;
+}
+
+form table tr td button {
+  padding: 15px 40px; 
+  background-color: #00e676;
+  color: #ffffff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.2em;
+  display: block;
+  margin: 20px auto;
+}
+
+form table tr td button:hover {
+  background-color: #00c467;
+  transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0d253f; 
+  color: #ffffff; 
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  flex-shrink: 0; 
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
+
+.social-links img {
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.2); 
+}
+
+/* Hover and Animation Effects */
+.about-section:hover,
+.projects-section:hover,
+.experience-section:hover,
+.contact-section:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+a {
+  color: #00e676; /* Bright green accent color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #00c467; /* Darker green accent color on hover */
+}
